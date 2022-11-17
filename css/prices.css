@@ -1,0 +1,374 @@
+/* Start Global Variablse */
+:root {
+    --min-color: #2ca46c;
+    --header-color: #ffffff;
+    --paragraph-color: #323641;
+    --sec-color: #ecfbf8;
+    --btn-color: #1f8654;
+    --third-color: #33a36e;
+    --trans-duration: 0.3s;
+    --min-padding: 60px 0;
+}
+::selection {
+    background-color: var(--min-color);
+    color: white;
+}
+  /* End Global Variablse */
+/* Start Prices Section */
+.prices {
+    background-color: var(--header-color);
+    padding-top: 60px;
+}
+.prices .section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+@media (max-width: 992px) {
+    .prices .section  {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.prices .section .content .main-component .right {
+    margin-bottom: 0;
+}
+@media (max-width: 992px) {
+    .prices .section .content .main-component .right {
+        margin:  0 auto;
+    }
+}
+@media (max-width: 992px) {
+    .prices .section .content .main-component .p-right {
+        margin: auto;
+    }
+}
+@media (max-width: 767px) {
+    .prices .section .content .main-component .p-right {
+        margin: auto;
+    }
+}
+.prices .section .content.main-component .head {
+    font-size: 14px;
+    font-weight: 300;
+    color: #787878;
+}
+.prices .section .content .main-component .head span {
+    color: var(--third-color);
+    font-weight: bold;
+}
+.prices .section .content .boxes-sec {
+    padding: 15px;
+}
+.prices .section .content .boxes-sec .box-sec {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.prices .section .content .boxes-sec .box-sec:hover {
+    box-shadow: 0 8px 12px rgb(0 0 0 / 10%);
+}
+@media (max-width: 992px) {
+    .prices .section .content .boxes-sec .box-sec {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+.prices .section .content .boxes-sec .box-sec .icon i {
+    font-size: 25px;
+    color: var(--third-color);
+}
+.prices .section .content .boxes-sec .box-sec .text h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.prices .section .content .boxes-sec .box-sec .text p {
+    font-size: 14px;
+    color: #787878;
+    line-height: 1.8;
+    margin: 0;
+    margin-top: 15px;
+}
+.prices .section .imgs {
+    flex: 1;
+}
+@media (max-width: 767px) {
+    .prices .section .imgs-mob {
+        display: block;
+        max-width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .prices .section .imgs {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .prices .section .imgs {
+        max-width: 100%;
+    }
+}
+.prices .section .imgs img {
+    width: 500px;
+}
+@media (max-width: 992px) {
+    .prices .section .imgs img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .prices .section .imgs img {
+        max-width: 100%;
+    }
+}
+.prices .price {
+    padding-top: 20px;
+}
+.prices .price .year {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 100px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: var(--third-color);
+    border-bottom: 3px solid var(--third-color);
+}
+.prices .price .year .month {
+    color: var(--paragraph-color);
+    padding: 5px 10px 5px 0;
+    border-bottom: 3px solid var(--sec-color);
+}
+.prices .price .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.prices .price .boxes .box {
+    padding: 20px;
+    background-color: var(--sec-color);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.prices .price .boxes .box-activ {
+    background-color: var(--third-color);
+}
+.prices .price .boxes .box::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: var(--sec-color);
+    position: absolute;
+    left: calc(50% - 50px);
+    top: -40px;
+    transform: rotate(45deg);
+    border-radius: 25px;
+}
+.prices .price .boxes .box-activ::after {
+    background-color: var(--third-color);
+
+}
+.prices .price .boxes .box i {
+    display: block;
+    width: fit-content;
+    font-size: 40px;
+    color: var(--third-color);
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.prices .price .boxes .box-activ i {
+    color: var(--header-color);
+}
+.prices .price .boxes .box h3 {
+    font-size: 18px;
+    text-align: center;
+    margin: 50px 0 20px;
+}
+.prices .price .boxes .box-activ h3 {
+    color: var(--header-color);
+}
+.prices .price .boxes .box ul {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.prices .price .boxes .box ul li {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--paragraph-color);
+    position: relative;
+}
+.prices .price .boxes .box-activ ul li {
+    color: var(--header-color);
+}
+.prices .price .boxes .box ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--third-color);
+    padding-left: 10px;
+}
+.prices .price .boxes .box-activ ul li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--header-color);
+
+}
+.prices .price .boxes .box .num {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+}
+.prices .price .boxes .box-activ .num {
+    color: var(--header-color);
+}
+.prices .price .boxes .box button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: var(--third-color);
+    border: 1px solid var(--hird-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px auto 10px;
+}
+.prices .price .boxes .box-activ button {
+    background-color: var(--header-color);
+    color: var(--third-color);
+}
+/* End Prices Section */
+/* Start Question Section */
+.question {
+    background-color: var(--header-color);
+    padding-bottom: 60px;
+}
+.question .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30;
+}
+@media (max-width: 992px) {
+    .question .content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .question .content {
+        flex-direction: column;
+    }
+}
+.question .content .contact {
+    width: 500px;
+}
+@media (max-width: 992px) {
+    .question .content .contact {
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .contact {
+        max-width: 100%;
+    }
+}
+.question .content .contact .main-component .right {
+    margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+    .question .content .contact .main-component .right {
+        margin: 0 auto 10px;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .contact .main-component .right {
+        margin: 0 auto 10px;
+    }
+}
+.question .content .contact .main-component .p-right {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+@media (max-width: 992px) {
+    .question .content .contact .main-component .p-right  {
+        margin: 0 auto 10px;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .contact .main-component .p-right  {
+        margin: 0 auto 10px;
+    }
+}
+.question .content .contact .main-component .que {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #787878;
+}
+@media (max-width: 992px) {
+    .question .content .contact .main-component .que  {
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .contact .main-component .que  {
+        text-align: center;
+    }
+}
+.question .content .contact button {
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    background-color: var(--third-color);
+    border: 1px solid var(--hird-color);
+}
+@media (max-width: 992px) {
+    .question .content .contact button  {
+        margin: 20px auto;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .contact button  {
+        margin: 20px auto;
+    }
+}
+.question .content .text {
+    flex: 1;
+}
+@media (max-width: 992px) {
+    .question .content .text {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .question .content .text {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.question .content .text .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f4f4f4;
+}
+.question .content .text .box p {
+    font-size: 14px;
+}
+.question .content .text .box i {
+    color: var(--third-color);
+}
+/* End Question Section */

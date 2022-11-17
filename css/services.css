@@ -1,0 +1,104 @@
+/* Start Global Variablse */
+:root {
+    --min-color: #2ca46c;
+    --header-color: #ffffff;
+    --paragraph-color: #323641;
+    --sec-color: #ecfbf8;
+    --btn-color: #1f8654;
+    --third-color: #33a36e;
+    --trans-duration: 0.3s;
+    --min-padding: 60px 0;
+}
+::selection {
+    background-color: var(--min-color);
+    color: white;
+}
+  /* End Global Variablse */
+/* Start Services Section */
+.services {
+    background-color: var(--header-color);
+    padding: var(--min-padding);
+}
+.services .boxes {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+    .services .boxes {
+        flex-direction: column;
+    }
+}
+.services .boxes .box {
+    flex: 1;
+}
+@media (max-width: 767px) {
+    .services .boxes .box {
+        max-width: 100%;
+    }
+}
+.services .boxes .box .main-component .right {
+    margin: 15px 0 5px;
+    padding: 0;
+}
+.services .boxes .box .main-component .head {
+    font-size: 14px;
+    font-weight: 300;
+    color: #787878;
+}
+.services .boxes .box .main-component .head span {
+    color: var(--third-color);
+    font-weight: bold;
+}
+.services .boxes .box .main-component p {
+    margin-top: 15px;
+}
+.services .boxes .imgs img {
+    width: 400px;
+    text-align: left;
+}
+@media (max-width: 767px) {
+    .services .boxes .imgs img{
+        max-width: 100%;
+    }
+}
+.services .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    align-items: center;
+    gap: 20px;
+}
+.services .content .box {
+    background-color: var(--sec-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+.services .content .box .imgs {
+    width: fit-content;
+    margin: 10px auto;
+}
+.services .content .box .imgs img {
+    width: 75px;
+}
+.services .content .box h5 {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+.services button {
+    font-size: 14px;
+    font-weight: 400;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 20px;
+    background-color: var(--third-color);
+}
+@media (max-width: 767px) {
+    .services button {
+        width: 100%;
+    }
+}
+/* End Services Section */
