@@ -273,7 +273,7 @@ button {
 }
 @media (max-width: 992px) {
     .landing .contents {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 }
